@@ -517,6 +517,7 @@ def print_items_that_are_strings(sequence):
 # Iterating through a sequence, selecting items:
 #   -- in this sample problem, the items that are odd integers.
 ###############################################################################
+import math
 def print_items_that_are_odd_integers(sequence):
     """
     Prints the items in the given sequence that are odd integers,
@@ -530,13 +531,15 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # Done: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
     # -------------------------------------------------------------------------
     for k in range(len(sequence)):
-        if sequence[k]%2==0 and seq
+        if type(sequence[k])==int:
+            if sequence[k]%2!=0 and sequence[k]!=str:
+                print(sequence[k],'is at index',k)
 
 
 # -----------------------------------------------------------------------------
